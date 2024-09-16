@@ -1,0 +1,12 @@
+body {
+    background-color: #F6CDC7;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.container img {
+    max-height: 100vh;
+}
