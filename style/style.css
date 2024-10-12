@@ -1,16 +1,112 @@
+/* Primitivos */ 
+
 :root {
-    --lighter-neutral: ;
-    --light-neutral: #FAF7F5;
+    --lighter-neutral: #FAF7F5;
+    --light-neutral: #D9D9D9;
     --dark-neutral: #1A071B;
     --primary: #FEBE4F;
     --secondary: #FABEC0;
     --terciary: #EB5A3D;
 }
 
+.light-neutral {
+    background: var(--light-neutral, #FAF7F5);
+    color: var(--dark-neutral);
+}
+
+.dark-neutral {
+    background: var(--dark-neutral, #1A071B);
+    color: var(--lighter-neutral);
+}
+
+.primary {
+    background: var(--primary, #FEBE4F);
+    color: var(--dark-neutral);
+}
+
+.secondary {
+    background: var(--secondary, #FABEC0);
+    color: var(--dark-neutral);
+}
+
+.terciary {
+    background: var(--terciary, #EB5A3D);
+    color: var(--dark-neutral);
+}
+
+.source-sans-3-400 {
+    font-family: "Source Sans 3", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.grand-hotel-regular {
+    font-family: "Grand Hotel", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+/* Tags globais */
+
 body {
-    background-color: #F6CDC7;
+    background-color: var(--lighter-neutral);
     overflow: hidden;
 }
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    font-weight: bold;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+
+.main-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 64px 160px;
+}
+
+/* Navegação */
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    gap: 8px 12px;
+    flex-wrap: wrap;
+}
+
+.nav-itens {
+    margin: 0;
+    padding: 0;
+}
+
+.btn-nav {
+    display: inline-block;
+    border-radius: 6.562px;
+    border: 2px solid var(--dark-neutral);
+    box-shadow: 4px 4px 0px 0px var(--dark-neutral);
+    padding: 8px;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.btn-nav:hover {
+    box-shadow: 0px 0px 0px var(--dark-neutral);
+    transform: translateY(2px);
+}
+
 
 .container {
     display: flex;
@@ -20,6 +116,14 @@ body {
 .container img {
     max-height: 100vh;
 }
+
+/* Título */
+
+.main-title {
+    font-size: 64px;
+}
+
+/* Breakpoints */
 
 @media (max-width: 600px) {
     .container {
