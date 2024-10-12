@@ -1,3 +1,12 @@
+:root {
+    --lighter-neutral: ;
+    --light-neutral: #FAF7F5;
+    --dark-neutral: #1A071B;
+    --primary: #FEBE4F;
+    --secondary: #FABEC0;
+    --terciary: #EB5A3D;
+}
+
 body {
     background-color: #F6CDC7;
     overflow: hidden;
