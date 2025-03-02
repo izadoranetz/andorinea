@@ -97,7 +97,7 @@ h3 {
   transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
 
-.btn-nav:hover {
+.btn-nav:hover, .portfolio-image:hover {
   box-shadow: 0px 0px 0px var(--dark-neutral);
   transform: translateY(2px);
 }
@@ -105,6 +105,7 @@ h3 {
 .section-link {
   display: block;
   width: 100%;
+  margin-top: 0.5rem;
 }
 
 /* Título */
@@ -116,27 +117,42 @@ h3 {
 
 /* Conteúdo */
 
-.blog {
+.portfolio,
+.blog,
+.newsletter {
+  margin: 1rem 0;
+}
+
+.blog-cards,
+.newsletter-cards {
   margin: 0.5rem 0;
 }
 
-.portfolio-images {
-  background: var(--primary);
+.portfolio-image {
+  background: var(--dark-neutral);
   border: 2px solid var(--dark-neutral);
   border-radius: 8px;
   box-shadow: 4px 4px 0px 0px var(--dark-neutral);
-  padding: 0.5rem;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  min-height: 280px;
+  height: auto;
+  width: calc(100% - 0.5rem);
+  overflow: hidden;
+  object-fit: cover;
 }
 
 /* Cards */
 
-.vertical-card {
+.vertical-card,
+.horizontal-card {
   background: var(--lighter-neutral);
   border: 2px solid var(--dark-neutral);
   border-radius: 8px;
   box-shadow: 4px 4px 0px 0px var(--dark-neutral);
+}
+
+.horizontal-card {
+  display: flex;
+  flex-direction: row;
 }
 
 .vertical-card-images {
@@ -149,15 +165,29 @@ h3 {
   object-fit: cover;
 }
 
-.vertical-card p {
+.horizontal-card-images {
+  background: var(--secondary-neutral);
+  border-right: 2px solid var(--dark-neutral);
+  border-radius: 8px 0px 0px 8px;
+  width: 50%;
+}
+
+.card-body p {
   width: 100%;
   overflow: hidden;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
   display: -webkit-box;
 }
 
-.vertical-card-body {
+.vertical-card .card-body p {
+  -webkit-line-clamp: 2;
+}
+
+.horizontal-card .card-body p {
+  -webkit-line-clamp: 5;
+}
+
+.card-body {
   padding: 0.5rem;
 }
 
@@ -173,7 +203,7 @@ h3 {
     margin: 1rem;
   }
 
-  .portfolio {
+  .portfolio-images {
     display: flex;
     flex-direction: column;
     gap: 1rem;
@@ -197,7 +227,7 @@ h3 {
     margin: 1rem;
   }
 
-  .portfolio {
+  .portfolio-images {
     display: grid;
     grid-template-columns: auto auto;
     gap: 1rem;
@@ -208,28 +238,33 @@ h3 {
     flex-direction: column;
     gap: 1rem;
   }
+
+  .newsletter-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-    main,
+  main,
   .header {
-    margin: 2rem;
+    margin: 2rem 6rem;
   }
 
-    .blog-cards {
-        margin: 0.5rem 0;
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 1rem;
-        width: 100%;
-      }
+  .blog-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    width: 100%;
+  }
 
-      .portfolio {
-        display: grid;
-        grid-template-columns: auto auto;
-        gap: 1rem;
-      }
+  .portfolio-images {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+  }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -240,10 +275,17 @@ h3 {
     gap: 1rem;
   }
 
-  .portfolio {
+  .portfolio-images {
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1rem;
+  }
+
+  .newsletter-cards {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+    width: 100%;
   }
 }
 
@@ -263,21 +305,17 @@ h3 {
     align-items: center;
   }
 
-  .portfolio {
+  .portfolio-images {
     display: grid;
     grid-template-columns: auto auto auto auto;
     gap: 1rem;
     width: 100%;
   }
 
-
   .blog-cards {
-    margin: 0.5rem 0;
     display: grid;
     grid-template-columns: auto auto auto;
     gap: 1rem;
     width: 100%;
   }
-
-  
 }
