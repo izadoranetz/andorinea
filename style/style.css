@@ -10,6 +10,11 @@
   --terciary: #eb5a3d;
 }
 
+:focus {
+  outline: 4px solid var(--secondary-text);
+  outline-offset: 0;
+}
+
 .light-neutral {
   background: var(--light-neutral, #faf7f5);
   color: var(--dark-neutral);
@@ -114,7 +119,7 @@ h3 {
   margin-top: 0.5rem;
 }
 
-.section-link:hover {
+.section-link:hover, .links-list a:hover {
   text-decoration: underline;
   color: var(--secondary-text);
 }
@@ -130,7 +135,8 @@ h3 {
 
 .portfolio,
 .blog,
-.newsletter {
+.newsletter,
+.links {
   margin: 1rem 0;
 }
 
@@ -149,6 +155,23 @@ h3 {
   width: calc(100% - 0.5rem);
   overflow: hidden;
   object-fit: cover;
+}
+
+.links-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  gap: 8px 12px;
+  flex-wrap: wrap;
+}
+
+.footer {
+  background: var(--dark-neutral);
+  color: var(--lighter-neutral);
+  height: 6rem;
+  margin: 0;
+  bottom: 0;
 }
 
 /* Cards */
@@ -199,10 +222,7 @@ h3 {
 }
 
 .card-body {
-  padding: 0.5rem;
-}
-
-.horizontal-card {
+  padding: 0.75rem;
 }
 
 /* Breakpoints */
