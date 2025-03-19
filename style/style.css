@@ -7,7 +7,7 @@
   --primary: #febe4f;
   --secondary: #fabec0;
   --secondary-text: #c9708b;
-  --terciary: #eb5a3d;
+  --terciary: #F68751;
 }
 
 :focus {
@@ -16,28 +16,28 @@
 }
 
 .light-neutral {
-  background: var(--light-neutral, #faf7f5);
+  background: var(--light-neutral);
   color: var(--dark-neutral);
 }
 
 .dark-neutral {
-  background: var(--dark-neutral, #1a071b);
+  background: var(--dark-neutral);
   color: var(--lighter-neutral);
 }
 
 .primary {
-  background: var(--primary, #febe4f);
+  background: var(--primary);
   color: var(--dark-neutral);
 }
 
 .secondary {
-  background: var(--secondary, #fabec0);
+  background: var(--secondary);
   color: var(--dark-neutral);
 }
 
 .terciary {
-  background: var(--terciary, #eb5a3d);
-  color: var(--lighter-neutral);
+  background: var(--terciary);
+  color: var(--ldark-neutral);
 }
 
 .source-sans-3-400 {
