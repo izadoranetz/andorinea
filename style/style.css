@@ -243,7 +243,11 @@ h3 {
 @media only screen and (max-width: 600px) {
   main,
   .header {
-    margin: 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .nav-list {
+    margin: 1rem 0;
   }
 
   .portfolio-images {
@@ -278,7 +282,11 @@ h3 {
 @media only screen and (min-width: 600px) {
   main,
   .header {
-    margin: 1rem;
+    margin: 2rem 1rem;
+  }
+
+  .nav-list {
+    margin: 1rem 0;
   }
 
   .portfolio-images {
@@ -304,7 +312,7 @@ h3 {
 @media only screen and (min-width: 768px) {
   main,
   .header {
-    margin: 2rem 6rem;
+    margin: 2rem 1rem;
   }
 
   .blog-cards {
