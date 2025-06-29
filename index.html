@@ -15,16 +15,47 @@
         .container {
             display: flex;
             justify-content: center;
+            margin: 1rem 2rem;
         }
     
         .container img {
-            max-height: 90vh;
+            max-height: 70vh;
+        }
+
+
+        .links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 1rem;
         }
 
         .subtitle {
             display: flex;
             justify-content: center;
+            margin: 0 1rem;
             font-family: 'Source Sans 3', sans-serif;
+        }
+
+        @media screen and (max-width: 600px) {
+            .container img {
+                max-height: 50vh;
+            }
+    
+            .links {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .links a {
+                width: 100%;
+                text-align: center;
+            }
+    
+            .subtitle {
+                font-size: 1rem;
+            }
+            
         }
     </style>
     
@@ -32,9 +63,15 @@
 
 <body>
     <div class="container">
-        <img src="img/main.jpg" alt="ilustração da andorinea deitada no sofá com os pés pra cima e lendo.">
+        <img src="img/main.jpg" alt="ilustração da andorinea deitada no sofá com os pés pra cima e lendo. Legenda escrito: Muito ocupada.">
     </div>
-    <p class="subtitle">... mas logo volto com atualizações aqui.</p>
+    <p class="subtitle">Em breve novidades. Enquanto isso confira:</p>
+    <div class="container links">
+       <a href="https://instagram.com/andorinea" class="btn-nav primary source-sans-3-400 active">instagram</a>
+       <a href="https://falandosozinhacomasparedes.substack.com/" class="btn-nav primary source-sans-3-400 active">newsletter</a>
+       <a href="https://www.behance.net/izadoranetz" class="btn-nav primary source-sans-3-400 active">behance</a>
+       <a href="https://www.linkedin.com/in/izadora-netz/" class="btn-nav primary source-sans-3-400 active">linkedin</a>
+    </div>
 </body>
 
 </html>
