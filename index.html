@@ -10,25 +10,37 @@
     <link rel="icon" type="image/svg" sizes="32x32" href="favicon.svg">
     <style type="text/css">
         body {
-            background-color: #F6CDC7;
+            background-color: var(--lighter-neutral);
         }
-    
+
+        h1 {
+            font-family: 'Grand Hotel', cursive;
+            font-size: 3rem;
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+
         .container {
             display: flex;
             justify-content: center;
-            margin: 1rem 2rem;
-        }
-    
-        .container img {
-            max-height: 70vh;
+            margin: 2rem 2rem;
         }
 
+        .container img {
+            margin-top: 2rem;;
+        }
+    
 
         .links {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
             gap: 1rem;
+        }
+
+        .links a {
+            width: 200px;
+            text-align: center;
         }
 
         .subtitle {
@@ -46,6 +58,7 @@
             .links {
                 flex-direction: column;
                 align-items: center;
+                margin-bottom: 2rem;
             }
 
             .links a {
@@ -64,8 +77,9 @@
 
 <body>
     <div class="container">
-        <img src="img/main.jpg" alt="ilustração da andorinea deitada no sofá com os pés pra cima e lendo. Legenda escrito: Muito ocupada.">
+        <img src="img/andorinea-logo-default.svg" alt="Logo andorinea: um circulo vermelho com a cabeça de uma andorinea de perfil, na cor amarela e com detalhes em preto.">
     </div>
+     <h1>andorinea</h1>
     <p class="subtitle">Em breve novidades. Enquanto isso confira:</p>
     <div class="container links">
        <a href="https://instagram.com/andorinea" class="btn-nav primary source-sans-3-400 active">instagram</a>
